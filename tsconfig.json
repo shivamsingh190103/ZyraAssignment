@@ -12,6 +12,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["apps/api/src", "apps/web/src", "apps/**/*.ts", "apps/**/*.tsx", "vitest.config.ts"]
+  "include": ["api/**/*.ts", "apps/api/src", "apps/web/src", "apps/**/*.ts", "apps/**/*.tsx", "vitest.config.ts"]
 }
-
