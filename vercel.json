@@ -3,11 +3,6 @@
   "buildCommand": "npm run build:web",
   "outputDirectory": "apps/web/dist",
   "installCommand": "npm install",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "nodejs22.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -19,4 +14,3 @@
     }
   ]
 }
-
