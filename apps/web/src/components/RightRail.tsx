@@ -4,9 +4,11 @@ import type { ActionCenterPayload } from "../types";
 
 interface RightRailProps {
   actionCenter: ActionCenterPayload;
+  onViewMessages: () => void;
+  onViewTasks: () => void;
 }
 
-export function RightRail({ actionCenter }: RightRailProps) {
+export function RightRail({ actionCenter, onViewMessages, onViewTasks }: RightRailProps) {
   const recentActivities = [
     { icon: CheckCircle2, title: "Task completed", text: `${actionCenter.summary.completedTasks} completed items on record` },
     { icon: CircleAlert, title: "Urgency updated", text: actionCenter.summary.urgencyReasons[0] },
@@ -18,7 +20,7 @@ export function RightRail({ actionCenter }: RightRailProps) {
       <section className="side-panel">
         <div className="panel-header">
           <h2>Recent Messages</h2>
-          <button type="button">View all</button>
+          <button type="button" onClick={onViewMessages}>View all</button>
         </div>
         <div className="message-list">
           {actionCenter.messages.slice(0, 3).map((message) => (
@@ -43,7 +45,7 @@ export function RightRail({ actionCenter }: RightRailProps) {
       <section className="side-panel">
         <div className="panel-header">
           <h2>Recent Activity</h2>
-          <button type="button">View all</button>
+          <button type="button" onClick={onViewTasks}>View all</button>
         </div>
         <div className="activity-list">
           {recentActivities.map((item) => {
@@ -63,4 +65,3 @@ export function RightRail({ actionCenter }: RightRailProps) {
     </aside>
   );
 }
-

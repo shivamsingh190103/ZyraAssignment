@@ -2,6 +2,18 @@
 
 A full-stack TypeScript mini feature for helping a school counselor quickly understand a student's profile, tasks, unread messages, and urgency level.
 
+## Functional Workspace
+
+The application goes beyond the required action-center screen and provides a complete, responsive counselor workflow:
+
+- Global search across students, tasks, and messages
+- Clickable student caseload with per-student action centers
+- All-student task management with live status updates
+- Selectable inbox with session-based reply drafts
+- Deadline calendar, caseload reports, counselor resources, and settings
+- Working notifications, help, profile, refresh, back-navigation, and view-all controls
+- Mobile navigation drawer and responsive layouts with no page-level horizontal overflow
+
 ## Tech Stack
 
 - Frontend: React, TypeScript, Vite
@@ -92,5 +104,4 @@ Run:
 npm test
 ```
 
-Expected result: all backend integration tests and frontend component tests pass.
-
+Expected result: all backend integration tests and frontend workspace tests pass.
